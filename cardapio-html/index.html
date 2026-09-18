@@ -13,6 +13,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/estilo.css">
+    <script src="./assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -35,11 +36,11 @@
     <nav>
         <div>
             <ul class="container">
-                <li><a href="#" class="active">Todos</a></li>
-                <li><a href="#">Lanches</a></li>
-                <li><a href="#">Porções</a></li>
-                <li><a href="#">Bebidas</a></li>
-                <li><a href="#">Sobremesas</a></li>
+                <li><a href="#" class="active" data-category="Todos">Todos</a></li>
+                <li><a href="#" data-category="Lanches">Lanches</a></li>
+                <li><a href="#" data-category="Porções">Porções</a></li>
+                <li><a href="#" data-category="Bebidas">Bebidas</a></li>
+                <li><a href="#" data-category="Sobremesas">Sobremesas</a></li>
             </ul>
         </div>
     </nav>
@@ -48,10 +49,10 @@
         <section>
             <header>
                 <h2>Produtos</h2>
-                <p>10 itens</p>
+                <p>Categoria: <span id="selected-category">Todos</span> — <span id="item-count">10</span> itens</p>
             </header>
 
-            <article class="search">
+            <article class="product" data-category="Lanches">
                 <figure>
                     <img src="./assets/img/burger.png" alt="Burger">
                     <figcaption>Lanches</figcaption>
@@ -62,7 +63,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Lanches">
                 <figure>
                     <img src="./assets/img/burger-bacon.png" alt="Bacon Burger">
                     <figcaption>Lanches</figcaption>
@@ -73,7 +74,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Lanches">
                 <figure>
                     <img src="./assets/img/burger-double.png" alt="Duplo Burguer">
                     <figcaption>Lanches</figcaption>
@@ -84,7 +85,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Porções">
                 <figure>
                     <img src="./assets/img/batata-rustica.png" alt="Batata Rústica">
                     <figcaption>Porções</figcaption>
@@ -95,7 +96,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Porções">
                 <figure>
                     <img src="./assets/img/batata-tradicional.png" alt="Batata Tradicional">
                     <figcaption>Porções</figcaption>
@@ -106,7 +107,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Bebidas">
                 <figure>
                     <img src="./assets/img/agua.png" alt="Água Sem Gás">
                     <figcaption>Bebidas</figcaption>
@@ -117,7 +118,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Bebidas">
                 <figure>
                     <img src="./assets/img/refri.png" alt="Refrigerante 300 ml">
                     <figcaption>Bebidas</figcaption>
@@ -128,7 +129,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Bebidas">
                 <figure>
                     <img src="./assets/img/chopp.png" alt="Chopp 300 ml">
                     <figcaption>Bebidas</figcaption>
@@ -139,7 +140,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Sobremesas">
                 <figure>
                     <img src="./assets/img/petit-gateau.png" alt="Petit Gateau">
                     <figcaption>Sobremesas</figcaption>
@@ -150,7 +151,7 @@
                 <button type="button">Adicionar</button>
             </article>
 
-            <article class="search">
+            <article class="product" data-category="Sobremesas">
                 <figure>
                     <img src="./assets/img/mousse-maracuja.png" alt="Mousse de Maracujá">
                     <figcaption>Sobremesas</figcaption>
@@ -164,14 +165,12 @@
 
         <aside>
             <h2>Seu Pedido</h2>
-
             <div class="cart-empty">
-                <img src="./assets/img/cart.svg" />
+                <img src="./assets/img/cart.svg" alt="Carrinho">
                 <p>Seu carrinho está vazio</p>
-                <p>Escolha um item do cardapio para começar</p>
+                <p>Escolha um item do cardápio para começar</p>
             </div>
         </aside>
-
     </main>
 
     <footer>
@@ -180,7 +179,6 @@
             <p>Rua Mato Grosso, 200 - Pato Branco - PR</p>
         </div>
     </footer>
-
 </body>
 
 </html>

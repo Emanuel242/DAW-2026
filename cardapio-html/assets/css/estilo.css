@@ -31,11 +31,10 @@ main {
 }
 
 /***********
-* CABECHALHO
+* CABEÇALHO
 ***********/
 body>header {
     background-color: var(--background);
-
     position: sticky;
     top: 0;
     z-index: 10;
@@ -91,12 +90,10 @@ header .cart-button img {
 /***********
 * Navegação
 ***********/
-
 nav {
     background-color: #ffffff;
     border-bottom: 1px solid #E7E5E4;
     padding-block: 0.5rem;
-
     overflow: hidden;
     position: sticky;
     top: 5rem;
@@ -108,9 +105,8 @@ nav ul {
     list-style: none;
     gap: 1.5rem;
     padding-block: 1rem;
-
     overflow-x: auto;
-    overscroll-behavior: inline: contain;
+    overscroll-behavior-inline: contain;
 }
 
 nav ul li {
@@ -138,7 +134,7 @@ nav ul a:hover {
     color: var(--primary);
 }
 
-nav ul a:not(a.active):hover {
+nav ul a:not(.active):hover {
     border-color: var(--primary);
     color: var(--primary);
 }
@@ -230,7 +226,7 @@ section article h3 {
     line-height: 1.25rem;
 }
 
-section article p: first-of-type {
+section article p:first-of-type {
     font-size: 0.8rem;
     color: var(--text-muted);
     padding-top: 0.5rem;
@@ -246,17 +242,18 @@ section article p:last-of-type {
 }
 
 section article button {
-    grid-column: 1 / -1;
     background-color: var(--primary);
     color: #fff;
     font-size: 0.8rem;
     font-weight: 700;
     padding-block: 0.75rem;
+    padding-inline: 1rem;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
     grid-column: 2;
     align-self: center;
+    margin-right: 1rem;
 }
 
 main aside {
@@ -269,7 +266,7 @@ main aside {
 }
 
 main aside h2 {
-    padding-block: 1rem;
+    padding: 1rem;
     font-size: 1rem;
 }
 
@@ -293,7 +290,6 @@ main aside .cart-empty p:last-of-type {
 /***********
 * Footer
 ***********/
-
 footer {
     background-color: var(--text-muted);
     color: var(--background);
@@ -313,8 +309,6 @@ footer .container {
 /***********
 * Responsividade
 ***********/
-/* Celulares Maiores*/
-
 @media (min-width: 30rem) {
     header .brand p {
         display: block;
@@ -326,7 +320,6 @@ footer .container {
     }
 }
 
-/* Tablets */
 @media (min-width: 48rem) {
     main section {
         grid-template-columns: repeat(2, minmax(0px, 1fr));
@@ -340,7 +333,6 @@ footer .container {
     }
 }
 
-/*desktop*/
 @media (min-width: 64rem) {
     main {
         grid-template-columns: minmax(0px, 1fr) 330px;
@@ -348,14 +340,11 @@ footer .container {
 
     main section {
         grid-column: 1;
+        grid-template-columns: repeat(3, minmax(0px, 1fr));
     }
 
     main aside {
         order: initial;
         grid-column: 2;
-    }
-
-    main section {
-        grid-template-columns: repeat(3, minmax(0px, 1fr));
     }
 }
