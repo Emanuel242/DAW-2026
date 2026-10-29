@@ -4,24 +4,9 @@ export type category = {
 }
 
 export const categories: category[] = [
-    {
-        alias: 'todos',
-        label: 'Todos'
-    },
-    {
-        alias: 'lanches',
-        label: 'Lanches'
-    },
-    {
-        alias: 'porcoes',
-        label: 'Porções'
-    },
-    {
-        alias: 'bebidas',
-        label: 'Bebidas'
-    },
-    {
-        alias: 'sobremesas',
-        label: 'Sobremesas'
-    }
+    { alias: 'todos', label: 'Todos' },
+    { alias: 'lanches', label: 'Lanches' },
+    { alias: 'porcoes', label: 'Porções' },
+    { alias: 'bebidas', label: 'Bebidas' },
+    { alias: 'sobremesas', label: 'Sobremesas' }
 ];

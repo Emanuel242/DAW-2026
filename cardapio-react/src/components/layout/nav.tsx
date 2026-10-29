@@ -1,18 +1,23 @@
-import type { category } from "../../data/categories";
+import type { category } from "../../data/categories"
 
 type NavigationBarProps = {
-    categories: category[];
-    activeCategory: string;
-    onSelectCategory: (alias: string) => void;
-};
+    categories: category[]
+    activeCategory: string | null
+    onSelectCategory: (alias: string) => void
+}
+
 export function NavigationBar({ categories, activeCategory, onSelectCategory }: NavigationBarProps) {
     return (
         <nav>
             <div className="container">
                 <ul>
                     {categories.map((category) => (
-                        <li>
-                            <button className={category.alias == activeCategory ? "active" : ""} type="button" onClick={() => onSelectCategory(category.alias)}>
+                        <li key={category.alias}>
+                            <button
+                                className={category.alias === activeCategory ? "active" : ""}
+                                type="button"
+                                onClick={() => onSelectCategory(category.alias)}
+                            >
                                 {category.label}
                             </button>
                         </li>
@@ -20,5 +25,5 @@ export function NavigationBar({ categories, activeCategory, onSelectCategory }: 
                 </ul>
             </div>
         </nav>
-    );
+    )
 }
