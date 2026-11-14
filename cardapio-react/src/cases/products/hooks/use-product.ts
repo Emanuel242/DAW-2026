@@ -1,5 +1,18 @@
+import { useEffect, useState } from "react"
 import { productService } from "../services/product-service"
+import type { Product } from "../dtos/product"
 
 export function useProducts() {
-    return productService.listAll()
+    const [products, setProducts] = useState<Product[]>([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState<string | null>(null)
+
+    useEffect(() => {
+        productService.listAll()
+            .then(setProducts)
+            .catch((e: Error) => setError(e.message))
+            .finally(() => setLoading(false))
+    }, [])
+
+    return { products, loading, error }
 }

@@ -267,6 +267,26 @@ section article button {
   border-radius: 100rem;
 }
 
+section .panel {
+  grid-column: 1 / -1;
+  padding-block: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background-color: #fff;
+}
+
+section .panel-error {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+section .panel-loading {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 /*************
 * SIDEBAR
 **************/

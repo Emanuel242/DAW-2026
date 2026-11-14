@@ -1,7 +1,9 @@
+import type { Product } from "../../cases/products/dtos/product"
 import { ProductCard } from "../../cases/products/components/product-card"
-import { products } from "../../cases/products/dtos/product"
 
 export function Main() {
+  const products: Product[] = []
+
   return (
     <main>
       <section>

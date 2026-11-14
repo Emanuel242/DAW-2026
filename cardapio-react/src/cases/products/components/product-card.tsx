@@ -7,6 +7,8 @@ type ProductCardProps = {
 export function ProductCard({ product }: ProductCardProps) {
     if (!product) return null
 
+    const price = Number(product.price) || 0
+
     return (
         <article>
             <figure>
@@ -15,7 +17,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </figure>
             <h3>{product.name}</h3>
             <p>{product.description}</p>
-            <p>R$ {product.price.toFixed(2)}</p>
+            <p>R$ {price.toFixed(2)}</p>
             <button type="button">Adicionar</button>
         </article>
     )
